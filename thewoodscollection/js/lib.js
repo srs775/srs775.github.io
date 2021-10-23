@@ -3,7 +3,7 @@
 
 var sent = false;
 
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("devnet"));
+const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("mainnet-beta"));
 
 const getProvider = () => {
   if ("solana" in window) {
